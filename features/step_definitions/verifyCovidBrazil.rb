@@ -16,6 +16,4 @@ Então('a API irá retornar os dados dos números de casos do Covid19 no Brasil 
     expect($response.parsed_response['countryInfo']['iso2']).to eq 'BR'
     #Valida o teste de contrato com o framework json_matcher
     expect($response.body).to match_json_schema('responseCovidBrazil')
-    #Loga o response body no terminal
-    puts $response.body
 end
